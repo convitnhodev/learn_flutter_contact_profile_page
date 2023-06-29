@@ -46,8 +46,8 @@ class ContactProfilePage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "Thai Nguyen Viet Hung",
-                          style: TextStyle(fontSize: 30),
+                          "convitnhodev - Thai Nguyen Viet Hung",
+                          style: TextStyle(fontSize: 22),
                         ),
                       ),
                     ],
@@ -65,11 +65,17 @@ class ContactProfilePage extends StatelessWidget {
                     children: [
                       buildCallButton(),
                       buildTextButton(),
-
+                      buildVideoCallButton(),
+                      buildEmailBotton(),
+                      buildDirectionsButton(),
+                      buildPayButton(),
                     ],
                   ),
                 ),
 
+                Divider(
+                  color: Colors.green,
+                ),
               ],
             ),
           ],
@@ -79,35 +85,82 @@ class ContactProfilePage extends StatelessWidget {
   }
 }
 
-
 Widget buildCallButton() {
- return Column(
-   children: <Widget>[
-     IconButton(
-       icon: Icon(
-         Icons.call,
-         color: Colors.indigo.shade800,
-       ),
-       onPressed: () {},
-     ),
-     Text("Call"),
-   ],
- );
+  return Column(
+    children: <Widget>[
+      IconButton(
+        icon: Icon(
+          Icons.call,
+          color: Colors.indigo.shade800,
+        ),
+        onPressed: () {},
+      ),
+      Text("Call"),
+    ],
+  );
 }
-
 
 Widget buildTextButton() {
- return Column(
-   children: <Widget>[
-     IconButton(
-       icon: Icon(
-         Icons.message,
-         color: Colors.indigo.shade800,
-       ),
-       onPressed: () {},
-     ),
-     Text("Text"),
-   ],
- );
+  return Column(
+    children: <Widget>[
+      IconButton(
+        icon: Icon(
+          Icons.message,
+          color: Colors.indigo.shade800,
+        ),
+        onPressed: () {},
+      ),
+      Text("Text"),
+    ],
+  );
 }
 
+Widget buildVideoCallButton() {
+  return Column(
+    children: <Widget>[
+      IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.video_call,
+            color: Colors.indigo.shade800,
+          )),
+      Text("Video call")
+    ],
+  );
+}
+
+Widget buildEmailBotton() {
+  return Column(
+    children: [
+      IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.email,
+            color: Colors.indigo.shade800,
+          )),
+      Text("Email")
+    ],
+  );
+}
+
+Widget buildDirectionsButton() {
+  return Column(
+    children: [
+      IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.directions, color: Colors.indigo.shade800)),
+      Text("Directions")
+    ],
+  );
+}
+
+Widget buildPayButton() {
+  return Column(
+    children: [
+      IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.attach_money, color: Colors.indigo.shade400)),
+      Text("Pay")
+    ],
+  );
+}
