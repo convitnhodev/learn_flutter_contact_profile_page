@@ -76,6 +76,12 @@ class ContactProfilePage extends StatelessWidget {
                 Divider(
                   color: Colors.green,
                 ),
+
+                mobilePhoneListTile(),
+                otherPhoneListTile(),
+                Divider(
+                  color: Colors.grey,
+                ),
               ],
             ),
           ],
@@ -162,5 +168,31 @@ Widget buildPayButton() {
           icon: Icon(Icons.attach_money, color: Colors.indigo.shade400)),
       Text("Pay")
     ],
+  );
+}
+
+Widget mobilePhoneListTile() {
+  return ListTile(
+    leading: Icon(Icons.call),
+    title: Text("+84.363963953"),
+    subtitle: Text("mobile"),
+    trailing: IconButton(
+      icon: Icon(Icons.message),
+      color: Colors.indigo.shade500,
+      onPressed: () {},
+    ),
+  );
+}
+
+Widget otherPhoneListTile() {
+  return ListTile(
+    leading: Text(""),
+    title: Text("440-440-3390"),
+    subtitle: Text("other"),
+    trailing: IconButton(
+      icon: Icon(Icons.message),
+      color: Colors.indigo.shade500,
+      onPressed: () {},
+    ),
   );
 }
