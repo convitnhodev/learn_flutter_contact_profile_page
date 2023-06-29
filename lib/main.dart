@@ -82,6 +82,14 @@ class ContactProfilePage extends StatelessWidget {
                 Divider(
                   color: Colors.grey,
                 ),
+
+                emailListTile(),
+
+                Divider(
+                  color: Colors.grey,
+                ),
+
+                addressListTile(),
               ],
             ),
           ],
@@ -195,4 +203,24 @@ Widget otherPhoneListTile() {
       onPressed: () {},
     ),
   );
+}
+
+Widget emailListTile() {
+  return ListTile(
+    leading: Icon(Icons.email),
+    title: Text("hungthai10a1@gmail.com"),
+    subtitle: Text("word"),
+  );
+}
+
+Widget addressListTile() {
+  return ListTile(
+      leading: Icon(Icons.location_on),
+      title: Text("702 Xa Lo Ha Noi, Thu Duc City"),
+      subtitle: Text("Home"),
+      trailing: IconButton(
+        icon: Icon(Icons.directions),
+        color: Colors.indigo.shade500,
+        onPressed: () {},
+      ));
 }
